@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var login = "login123";
+    var senha = "senha123";
+    var limite = parseInt(prompt("Qual o limite de tentativas para logar? "));
+    var inicioDoLimite = 1;
+
+    while(inicioDoLimite <= limite) {
+        var loginTentado = prompt("Informe seu login: ");
+        var senhaTentada = prompt("Informe sua senha: ");
+
+        if(login == loginTentado && senha == senhaTentada) {
+            alert("Bem-vindo ao sistema, @" + loginTentado);
+            inicioDoLimite = limite; // sair do loop 
+
+        } else {
+            if (tentativaAtual == 3) {
+                alert("Você atingiu o limite de tentativas estipulado!");
+            } else {
+                alert("Login ou senha inválido(s), tente novamente");
+            }
+        }
+
+        inicioDoLimite += 1;  
+    }
+
+</script>
